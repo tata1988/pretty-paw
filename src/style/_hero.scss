@@ -1,0 +1,87 @@
+.hero {
+    position: relative;
+    background-image: url('../img/banner.jpg');
+    background-image: image-set(
+        url('../img/banner2x.webp') 2x,
+        url('../img/banner.webp') 1x,
+        url('../img/banner2x.jpg') 2x,
+        url('../img/banner.jpg') 1x
+    );
+
+    background-size: cover;
+    background-position: center;
+
+    @include md {
+        background-image: url('../img/banner-big2x.jpg');
+        background-image: image-set(
+            url('../img/banner-big2x.webp') 2x,
+            url('../img/banner-big1x.webp') 1x,
+            url('../img/banner-big2x.jpg') 2x,
+            url('../img/banner-big1x.jpg') 1x
+    );
+    }
+
+    @include xl {
+        background-image: url('../img/banner-big4x.jpg');
+        background-image: image-set(
+            url('../img/banner-big4x.webp') 2x,
+            url('../img/banner-big2x.webp') 1x,
+            url('../img/banner-big4x.jpg') 2x,
+            url('../img/banner-big2x.jpg') 1x
+    );
+    }
+
+    @include xxl {
+        background-image: url('../img/banner-big4x.jpg');
+        background-image: image-set(
+        url('../img/banner-big4x.webp') 2x,
+        url('../img/banner-big4x.jpg') 2x
+    );
+    }
+
+    &__container {
+        position: relative;
+        z-index: 10;
+        min-height: 554px;
+        padding-top: 120px;
+        padding-bottom: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+
+        @include xl {
+            min-height: 780px;
+        }
+        @include xxl {
+            min-height: 100vh;
+        }
+    }
+
+    &__title {
+        font-weight: 1000;
+        font-size: 40px;
+        text-transform: uppercase;
+        color: #FFAA05;
+        line-height: 1;
+        margin-bottom: 24px;
+    }
+
+    &__subtitle {
+        font-size: 20px;
+        line-height: 1;
+        text-transform: uppercase;
+        color: $second;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        z-index: 5;
+        inset: 0;
+        background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 35.38%, #000000 100%);
+    }
+
+    &__video-bg {
+        z-index: 0;
+    }
+}

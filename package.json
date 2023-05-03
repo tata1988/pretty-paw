@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack serve",
+    "webp": "node webp-convert.mjs",
     "build-dev": "webpack",
     "build-prod": "webpack --node-env=production",
     "clear": "rd /s /q dist"
@@ -27,6 +28,8 @@
     "html-loader": "^4.2.0",
     "html-webpack-plugin": "^5.5.1",
     "image-webpack-loader": "^8.1.0",
+    "imagemin": "^8.0.1",
+    "imagemin-webp": "^8.0.0",
     "mini-css-extract-plugin": "^2.7.5",
     "postcss": "^8.4.23",
     "postcss-loader": "^7.3.0",
@@ -40,6 +43,7 @@
     "webpack-dev-server": "^4.13.3"
   },
   "dependencies": {
-    "normalize.css": "^8.0.1"
+    "normalize.css": "^8.0.1",
+    "swiper": "^9.2.4"
   }
 }
