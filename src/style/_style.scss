@@ -116,6 +116,12 @@ iframe {
   background: $second;
   border-radius: 80px;
 
+  @include lg {
+    padding: 17px 32px;
+    font-size: 20px;
+    gap: 10px;
+  }
+
 
   &::after {
     content: '';
@@ -125,6 +131,21 @@ iframe {
     background: url(../img/vector.svg) center/contain no-repeat;
   }
 
+}
+
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  border-radius: 16px;
+  background-color: $second;
+  opacity: 1;
+  transition: width .3s ease;
+}
+
+
+.swiper-pagination-bullet-active {
+  width: 40px;
+  background-color: $back;
 }
 
 
