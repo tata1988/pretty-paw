@@ -95,7 +95,7 @@
             }
         }
 
-        &_birds {
+        &_birds::before {
             background-image: url('../img/birds.jpg');
 
             /* background-image: image-set(url('../img/birds.webp') 1x,
@@ -110,7 +110,7 @@
             }
         }
 
-        &_reptiles {
+        &_reptiles::before {
             background-image: url('../img/reptiles.jpg');
 
             /* background-image: image-set(url('../img/reptiles.webp') 1x,
@@ -125,7 +125,7 @@
             }
         }
 
-        &_water {
+        &_water::before {
             background-image: url('../img/water.jpg');
 
             /* background-image: image-set(url('../img/water.webp') 1x,
@@ -140,7 +140,7 @@
             }
         }
 
-        &_insects {
+        &_insects::before {
             background-image: url('../img/insects.jpg');
 
             /* background-image: image-set(url('../img/insects.webp') 1x,
