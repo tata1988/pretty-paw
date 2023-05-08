@@ -1,42 +1,34 @@
 .hero {
     position: relative;
     background-image: url('../img/banner.jpg');
-    background-image: image-set(
-        url('../img/banner2x.webp') 2x,
-        url('../img/banner.webp') 1x,
-        url('../img/banner2x.jpg') 2x,
-        url('../img/banner.jpg') 1x
-    );
+    background-image: image-set(url('../img/banner2x.webp') 2x,
+            url('../img/banner.webp') 1x,
+            url('../img/banner2x.jpg') 2x,
+            url('../img/banner.jpg') 1x);
 
     background-size: cover;
     background-position: center;
 
     @include md {
         background-image: url('../img/banner-big2x.jpg');
-        background-image: image-set(
-            url('../img/banner-big2x.webp') 2x,
-            url('../img/banner-big1x.webp') 1x,
-            url('../img/banner-big2x.jpg') 2x,
-            url('../img/banner-big1x.jpg') 1x
-    );
+        background-image: image-set(url('../img/banner-big2x.webp') 2x,
+                url('../img/banner-big1x.webp') 1x,
+                url('../img/banner-big2x.jpg') 2x,
+                url('../img/banner-big1x.jpg') 1x);
     }
 
     @include xl {
         background-image: url('../img/banner-big4x.jpg');
-        background-image: image-set(
-            url('../img/banner-big4x.webp') 2x,
-            url('../img/banner-big2x.webp') 1x,
-            url('../img/banner-big4x.jpg') 2x,
-            url('../img/banner-big2x.jpg') 1x
-    );
+        background-image: image-set(url('../img/banner-big4x.webp') 2x,
+                url('../img/banner-big2x.webp') 1x,
+                url('../img/banner-big4x.jpg') 2x,
+                url('../img/banner-big2x.jpg') 1x);
     }
 
     @include xxl {
         background-image: url('../img/banner-big4x.jpg');
-        background-image: image-set(
-        url('../img/banner-big4x.webp') 2x,
-        url('../img/banner-big4x.jpg') 2x
-    );
+        background-image: image-set(url('../img/banner-big4x.webp') 2x,
+                url('../img/banner-big4x.jpg') 2x);
     }
 
     &__container {
@@ -91,7 +83,7 @@
     &::before {
         content: '';
         position: absolute;
-        z-index: 5;
+        z-index: 3;
         inset: 0;
         background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 35.38%, #000000 100%);
     }

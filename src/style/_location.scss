@@ -1,0 +1,190 @@
+.location {
+
+    &__list {
+        @include lg {
+            display: flex;
+            min-height: 552px;
+            justify-content: space-between;
+            background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+        }
+
+        @include xl {
+            min-height: 780px;
+        }
+
+        @include xxl {
+            min-height: 100vh;
+            max-width: 2560px;
+            margin: 0 auto;
+        }
+    }
+
+    &__item {
+        position: relative;
+        padding: 50px 16px;
+        min-height: 273px;
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+
+        @include sm {
+            padding: 50px 32px;
+            min-height: 200px;
+        }
+
+        @include lg {
+            background-image: none;
+            flex: 0 0 calc(100% / 5);
+            padding: 0;
+        }
+
+        &:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            z-index: 5;
+            display: block;
+            bottom: 0;
+            background-color: $second;
+            right: 50%;
+            height: 0.5px;
+            width: calc(100% - 32px);
+            transform: translate(50%, 0.5px);
+
+            @include lg {
+                bottom: 50%;
+                right: 0;
+                transform: translate(0.5px, 50%);
+                height: calc(100% - 186px);
+                width: 0.5px;
+            }
+
+            @include xl {
+                height: calc(100% - 200px);
+            }
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            z-index: -1;
+            inset: 0;
+            background-size: cover;
+            background-position: center;
+
+        }
+
+        &_mammals::before {
+            background-image: url('../img/mammals.jpg');
+            /*  background-image: image-set(url('../img/mammals.webp') 2x,
+                    url('../img/mammals.jpg') 2x,
+                    url('../img/mammals.webp') 1x,
+                    url('../img/mammals.jpg') 1x); */
+
+            @include sm {
+                background-image: url('../img/mammals_tablet.jpg');
+                /*  background-image: image-set(url('../img/mammals_tablet_2x.webp') 2x,
+                        url('../img/mammals_tablet_2x.jpg') 2x,
+                        url('../img/mammals_tablet.webp') 1x,
+                        url('../img/mammals_tablet.jpg') 1x); */
+            }
+
+            @include lg {
+                background-image: url('../img/mammals_laptop.jpg');
+                /*  background-image: image-set(url('../img/mammals_tablet_2x.webp') 2x,
+                        url('../img/mammals_tablet_2x.jpg') 2x,
+                        url('../img/mammals_tablet.webp') 1x,
+                        url('../img/mammals_tablet.jpg') 1x); */
+            }
+        }
+
+        &_birds {
+            background-image: url('../img/birds.jpg');
+
+            /* background-image: image-set(url('../img/birds.webp') 1x,
+                    url('../img/birds.jpg') 1x);
+ */
+            @include sm {
+                background-image: url('../img/birds_tablet.jpg');
+            }
+
+            @include lg {
+                background-image: url('../img/birds_laptop.jpg');
+            }
+        }
+
+        &_reptiles {
+            background-image: url('../img/reptiles.jpg');
+
+            /* background-image: image-set(url('../img/reptiles.webp') 1x,
+                    url('../img/reptiles.jpg') 1x);
+ */
+            @include sm {
+                background-image: url('../img/reptiles_tablet.jpg');
+            }
+
+            @include lg {
+                background-image: url('../img/reptiles_laptop.jpg');
+            }
+        }
+
+        &_water {
+            background-image: url('../img/water.jpg');
+
+            /* background-image: image-set(url('../img/water.webp') 1x,
+                    url('../img/water.jpg') 1x);
+ */
+            @include sm {
+                background-image: url('../img/water_tablet.jpg');
+            }
+
+            @include lg {
+                background-image: url('../img/water_laptop.jpg');
+            }
+        }
+
+        &_insects {
+            background-image: url('../img/insects.jpg');
+
+            /* background-image: image-set(url('../img/insects.webp') 1x,
+                    url('../img/insects.jpg') 1x);
+ */
+            @include sm {
+                background-image: url('../img/insects_tablet.jpg');
+            }
+
+            @include lg {
+                background-image: url('../img/insects_laptop.jpg');
+            }
+        }
+    }
+
+    &__title {
+        font-weight: 1000;
+        font-size: 20px;
+        line-height: 1;
+        color: $back;
+        text-transform: uppercase;
+        margin-bottom: 16px;
+        white-space: nowrap;
+
+        @include lg {
+            position: absolute;
+            margin-bottom: 0;
+            top: 50%;
+            left: 50%;
+            transform: rotate(-90deg) translate(-50%, -50%);
+            transform-origin: top left;
+            color: $second;
+        }
+
+        @include xl {
+            font-size: 32px;
+        }
+    }
+
+    &__descr {
+        color: $second;
+
+        @include lg {
+            display: none;
+        }
+    }
+}
