@@ -46,7 +46,7 @@
         <h1 class="hero__title">Зоосад</h1>
         <p class="hero__subtitle">С&nbsp;заботой о&nbsp;животных</p>
       </div>
-      <video class="hero__video-bg video-bg" loading="lazy" autoplay loop muted playsinline></video>
+      <video class="hero__video-bg video-bg" autoplay loop muted playsinline></video>
     </section>
 
     <section class="about">
@@ -165,7 +165,9 @@
           <ul class="career__image-list swiper-wrapper">
             <li class="career__image-item swiper-slide">
               <picture class="career__image-wrapper">
-                <source srcset="img/parrots2.webp" type="image/webp">
+                <source srcset="img/parrots2_xxl.webp" type="image/webp" media="(min-width: 1440px)>
+                <source srcset="img/parrots2_xxl.jpg" media="(min-width: 1440px)">
+                <source srcset="img/parrots2.webp" type="image/webp" media="(min-width: 1440px)>
                 <img src="img/parrots2.jpg" alt="попугаи" class="career__image" loading="lazy">
               </picture>
             </li>

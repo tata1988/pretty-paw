@@ -73,34 +73,34 @@
 
         &_mammals::before {
             background-image: url('../img/mammals.jpg');
-            /*  background-image: image-set(url('../img/mammals.webp') 2x,
+            background-image: image-set(url('../img/mammals.webp') 2x,
                     url('../img/mammals.jpg') 2x,
                     url('../img/mammals.webp') 1x,
-                    url('../img/mammals.jpg') 1x); */
+                    url('../img/mammals.jpg') 1x);
 
             @include sm {
                 background-image: url('../img/mammals_tablet.jpg');
-                /*  background-image: image-set(url('../img/mammals_tablet_2x.webp') 2x,
+                background-image: image-set(url('../img/mammals_tablet_2x.webp') 2x,
                         url('../img/mammals_tablet_2x.jpg') 2x,
                         url('../img/mammals_tablet.webp') 1x,
-                        url('../img/mammals_tablet.jpg') 1x); */
+                        url('../img/mammals_tablet.jpg') 1x);
             }
 
             @include lg {
                 background-image: url('../img/mammals_laptop.jpg');
-                /*  background-image: image-set(url('../img/mammals_tablet_2x.webp') 2x,
+                background-image: image-set(url('../img/mammals_tablet_2x.webp') 2x,
                         url('../img/mammals_tablet_2x.jpg') 2x,
                         url('../img/mammals_tablet.webp') 1x,
-                        url('../img/mammals_tablet.jpg') 1x); */
+                        url('../img/mammals_tablet.jpg') 1x);
             }
         }
 
         &_birds::before {
             background-image: url('../img/birds.jpg');
 
-            /* background-image: image-set(url('../img/birds.webp') 1x,
+            background-image: image-set(url('../img/birds.webp') 1x,
                     url('../img/birds.jpg') 1x);
- */
+
             @include sm {
                 background-image: url('../img/birds_tablet.jpg');
             }
