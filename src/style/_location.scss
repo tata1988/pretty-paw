@@ -1,6 +1,10 @@
 .location {
+    position: relative;
 
     &__list {
+        position: relative;
+        z-index: 10;
+
         @include lg {
             display: flex;
             min-height: 552px;
@@ -69,6 +73,9 @@
             background-size: cover;
             background-position: center;
 
+            @include lg {
+                background-image: none;
+            }
         }
 
         &_mammals::before {
@@ -80,14 +87,6 @@
 
             @include sm {
                 background-image: url('../img/mammals_tablet.jpg');
-                background-image: image-set(url('../img/mammals_tablet_2x.webp') 2x,
-                        url('../img/mammals_tablet_2x.jpg') 2x,
-                        url('../img/mammals_tablet.webp') 1x,
-                        url('../img/mammals_tablet.jpg') 1x);
-            }
-
-            @include lg {
-                background-image: url('../img/mammals_laptop.jpg');
                 background-image: image-set(url('../img/mammals_tablet_2x.webp') 2x,
                         url('../img/mammals_tablet_2x.jpg') 2x,
                         url('../img/mammals_tablet.webp') 1x,
@@ -105,54 +104,42 @@
                 background-image: url('../img/birds_tablet.jpg');
             }
 
-            @include lg {
-                background-image: url('../img/birds_laptop.jpg');
-            }
         }
 
         &_reptiles::before {
             background-image: url('../img/reptiles.jpg');
 
-            /* background-image: image-set(url('../img/reptiles.webp') 1x,
+            background-image: image-set(url('../img/reptiles.webp') 1x,
                     url('../img/reptiles.jpg') 1x);
- */
+
             @include sm {
                 background-image: url('../img/reptiles_tablet.jpg');
             }
 
-            @include lg {
-                background-image: url('../img/reptiles_laptop.jpg');
-            }
         }
 
         &_water::before {
             background-image: url('../img/water.jpg');
 
-            /* background-image: image-set(url('../img/water.webp') 1x,
+            background-image: image-set(url('../img/water.webp') 1x,
                     url('../img/water.jpg') 1x);
- */
+
             @include sm {
                 background-image: url('../img/water_tablet.jpg');
             }
 
-            @include lg {
-                background-image: url('../img/water_laptop.jpg');
-            }
         }
 
         &_insects::before {
             background-image: url('../img/insects.jpg');
 
-            /* background-image: image-set(url('../img/insects.webp') 1x,
+            background-image: image-set(url('../img/insects.webp') 1x,
                     url('../img/insects.jpg') 1x);
- */
+
             @include sm {
                 background-image: url('../img/insects_tablet.jpg');
             }
 
-            @include lg {
-                background-image: url('../img/insects_laptop.jpg');
-            }
         }
     }
 
@@ -186,5 +173,14 @@
         @include lg {
             display: none;
         }
+    }
+
+    &__video-bg {
+        display: none;
+
+        @include lg {
+            display: block;
+        }
+
     }
 }
