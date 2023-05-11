@@ -5,9 +5,12 @@ import './index.scss';
 import { slidersInit } from './modules/sliders.js';
 import { videoBackgroundInit } from './modules/videoBackground';
 import { menuControl } from './modules/menuControl';
+import { locationHover } from './modules/locationHover';
+
 
 videoBackgroundInit();
 menuControl();
+locationHover();
 
 slidersInit('.about__slider', {
     pagination: {
