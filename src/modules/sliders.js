@@ -9,7 +9,8 @@ const params = {
     },
     slidesPerView: 1,
     pagination: {
-        el: '.swiper-pagination'
+        el: '.swiper-pagination',
+        enabled: true,
     },
     modules: [Autoplay, Pagination]
 }

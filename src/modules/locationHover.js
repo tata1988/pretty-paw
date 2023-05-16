@@ -29,7 +29,7 @@ export const locationHover = () => {
             })
             .to(title, {
                 whiteSpace: 'unset',
-                hyphens: 'auto',
+                hyphens: 'manual',
                 color: '#FFAA05',
                 marginBottom: mediaQueryXL.matches ? '40px' : '24px',
                 duration: 0,
