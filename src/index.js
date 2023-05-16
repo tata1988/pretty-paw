@@ -8,12 +8,14 @@ import { videoBackgroundInit } from './modules/videoBackground';
 import { menuControl } from './modules/menuControl';
 import { locationHover } from './modules/locationHover';
 import { initScrollTopBtn } from './modules/scrollTopBtn';
+import { pageControlInit } from './modules/pageControl';
 
 
 videoBackgroundInit();
 menuControl();
 locationHover();
 initScrollTopBtn();
+pageControlInit();
 
 slidersInit('.about__slider', {
     pagination: {
